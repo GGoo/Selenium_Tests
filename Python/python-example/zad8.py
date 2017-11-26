@@ -15,5 +15,7 @@ def login(driver):
     driver.find_element_by_name("username").send_keys("username")
     driver.find_element_by_name('password').send_keys("admin")
     driver.find_element_by_css_selector("div.footer > button").click()
-    WebDriverWait(driver,10).until(EC.title_is("My Store"));
+    WebDriverWait(driver,10).until(EC.title_is("My Store"))
 
+def checking_nr_of_stickers(driver):
+    
