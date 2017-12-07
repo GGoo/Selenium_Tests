@@ -10,12 +10,12 @@ def driver(request):
     request.addfinalizer(wd.quit)
     return wd
 
-def login(driver):
-    driver.get("http://localhost/litecart/admin/")
-    driver.find_element_by_name("username").send_keys("username")
-    driver.find_element_by_name('password').send_keys("admin")
-    driver.find_element_by_css_selector("div.footer > button").click()
-    WebDriverWait(driver,10).until(EC.title_is("My Store"))
 
-def checking_nr_of_stickers(driver):
-    
+def test_login(driver):
+    driver.get("http://localhost/litecart/admin/")
+    driver.find_element_by_name("username").send_keys("admin")
+    driver.find_element_by_name('password').send_keys("admin")
+    WebDriverWait(driver,50)
+    driver.find_element_by_css_selector("div.footer > button").click()
+    WebDriverWait(driver,50).until(EC.title_is("My Store"))
+
