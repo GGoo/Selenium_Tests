@@ -1,1 +1,1 @@
-# Selenium Tests in Python and Java
+# Selenium Tests in Python
